@@ -1,11 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PagesComponent } from './pages.component';
+
+import { IssueModule } from './issue/issue.module';
+import { WikiModule } from './wiki/wiki.module';
+
+import { PagesComponent } from "./pages.component";
+import { TopComponent } from "./top/top.component";
+
+import { pagesRouting, pagesRoutingProviders } from "./pages.routes";
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    IssueModule,
+    WikiModule,
+    pagesRouting
   ],
-  declarations: [PagesComponent]
+  providers: [
+    pagesRoutingProviders
+  ],
+  declarations: [
+    PagesComponent,
+    TopComponent
+  ]
 })
 export class PagesModule { }

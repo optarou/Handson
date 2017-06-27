@@ -18,3 +18,6 @@ const pageRoutes: Routes = [
     ]
   }
 ];
+
+export const pagesRoutingProviders: any[] = [];
+export const pagesRouting: ModuleWithProviders = RouterModule.forChild(pageRoutes);
